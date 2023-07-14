@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Diziyi Girin = ");
+        int list = input.nextInt();
+
+        double [] number = new double[list];
+        for (int i=0; i<list; i++){
+            System.out.print((i+1) +".Sayi = " );
+            number[i] = input.nextDouble();
+        }
+        double sum =0;
+        for (double n : number){
+            sum += 1/n;
+        }
+        double harmonic = list/sum;
+        System.out.println("Harmonik Ortalama : " + harmonic);
+    }
+}
